@@ -1,0 +1,113 @@
+//Hacim Hesaplama
+package orkunn;
+
+import javax.swing.JOptionPane;
+
+public class sayi {
+
+    public static void main(String[] args) {
+
+        String Sekil, Sorular = "";
+        char Secilen;
+
+        do {
+
+            Sekil = "Hacmini Hesaplamak İstediğiniz Sekli Seçin:n";
+            Sekil += "1. Küpn";
+            Sekil += "2. Dikdörtgenler Prizmasın";
+            Sekil += "3. Silindirn";
+            Sekil += "4. Küren";
+            Sekil += "Şekil Nosunu Girinizn";
+            Secilen = JOptionPane.showInputDialog(Sekil).charAt(0);
+
+
+        } while (Secilen < '1' || Secilen > '4');
+
+        switch (Secilen) {
+            case '1':
+
+                String uznl;
+
+                int a;
+                int cozum;
+
+                uzunl = JOptionPane.showInputDialog("Bir Kenarın Uzunluğunu Girin");
+
+
+                a = Integer.parseInt(uzunl);
+
+
+                cozum = a * a * a;
+
+                JOptionPane.showMessageDialog(null, cozum + " " + "SantimetreKüp");
+
+                break;
+            case '2':
+
+                String uzunluk;
+                String genislik;
+                String yukseklik;
+
+                int sayi1;
+                int sayi2;
+                int sayi3;
+                int cevap;
+
+                uzunluk = JOptionPane.showInputDialog("Uzunluğu Girin");
+                genislik = JOptionPane.showInputDialog("Genişliği Girin");
+                yukseklik = JOptionPane.showInputDialog("Yüksekliği Girin");
+
+                sayi1 = Integer.parseInt(uzunluk);
+                sayi2 = Integer.parseInt(genislik);
+                sayi3 = Integer.parseInt(yukseklik);
+
+                cevap = sayi1 * sayi2 * sayi3;
+
+                JOptionPane.showMessageDialog(null, cevap + " " + "SantimetreKüp");
+
+                break;
+            case '3':
+                String yk;
+                String yc;
+                int r;
+                int h;
+                int sonuc;
+
+                yk = JOptionPane.showInputDialog("Yüksekliği Girin");
+                yc = JOptionPane.showInputDialog("Yarıçapı Girin");
+
+                h = Integer.parseInt(yk);
+                r = Integer.parseInt(yc);
+
+
+                sonuc = 3 * r * r*h;
+
+                JOptionPane.showMessageDialog(null, sonuc + " " + "SantimetreKüp");
+                break;
+            case '4':
+
+
+                String yarıcap;
+                int r2;
+                
+                int snc;
+
+
+                yarıcap = JOptionPane.showInputDialog("Yarıçapı Girin");
+
+
+                r2 = Integer.parseInt(yarıcap);
+
+
+                snc = 4/3*3*r2*r2*r2;
+
+                JOptionPane.showMessageDialog(null, snc + " " + "SantimetreKüp");
+                
+                break;
+            
+
+        }
+
+
+    }
+}
